@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mountains+of+Christmas:wght@400;700&family=Shizuru&display=swap');
+/* font-family: 'Mountains of Christmas', cursive;
+font-family: 'Shizuru', cursive; */
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(118, 204, 200);
+}
+nav{
+    background-color: rgb(207, 46, 140);
+    color: white;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Shizuru', cursive;
+}
+nav ul{
+    list-style: none;
+}
+
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 7.5vw);
+    grid-template-columns: repeat(3, 7.5vw);
+    font-family: 'Architects Daughter', cursive;
+    position: relative;
+}
+.container div{
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container div:hover{
+    background: rgba(201, 16, 154, 0.911);
+    color: white;
+}
+.gameinfo{
+    padding: 30px; 
+    font-family: 'Architects Daughter', cursive;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.info{
+    font-size: 50px;
+    border: 2px dashed black;
+    background-color: beige;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset{
+    margin: 10px 10px 20px 0;
+    padding: 5px 20px;
+    font-family: 'Shizuru', cursive;
+    background-color: rgb(207, 46, 140);
+    color: white;
+}
+
+.line{
+    background: rgb(207, 46, 140);
+    width:22.5vw;
+    height: 5px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+@media only screen and (max-width: 800px) {
+    .gamecontainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 10vw);
+        grid-template-columns: repeat(3, 10vw);
+        font-family: 'Architects Daughter', cursive;
+        position: relative;
+    }
+}
